@@ -1,0 +1,184 @@
+Test d'accès  
+└── .gitignore 
+└── app.vue 
+└── GUIDE.md 
+└── guide_refact.md 
+└── guide_utils.md 
+└── nuxt.config.ts 
+└── README.md 
+└── tailwind.config.ts 
+└── tsconfig.json 
+├── [assets] 
+│   ├── [css] 
+│   │   └── main.css 
+│   │   └── tailwind.css 
+│   │   ├── [tailwind] 
+│   │   │   └── base.css 
+│   │   │   └── components.css 
+│   │   │   └── utilities.css 
+├── [components] 
+│   ├── [admin] 
+│   │   ├── [roles] 
+│   │   │   └── RoleForm.vue 
+│   │   ├── [workflow] 
+│   │   │   └── WorkflowForm.vue 
+│   │   │   └── WorkflowList.vue 
+│   │   │   └── WorkflowStatusToggle.vue 
+│   │   │   └── WorkflowStepForm.vue 
+│   │   │   └── WorkflowStepsList.vue 
+│   ├── [auth] 
+│   │   └── ChangePasswordForm.vue 
+│   │   └── LoginForm.vue 
+│   │   └── RegisterForm.vue 
+│   ├── [dashboard] 
+│   │   └── PendingTasks.vue 
+│   │   └── QuickActions.vue 
+│   │   └── RecentActivity.vue 
+│   │   └── StatsCard.vue 
+│   ├── [decomptes] 
+│   │   └── DecompteActions.vue 
+│   │   └── DecompteCard.vue 
+│   │   └── DecompteForm.vue 
+│   │   └── DecomptesList.vue 
+│   │   └── DecompteStatus.vue 
+│   │   └── DecompteView.vue 
+│   │   └── SignatureStatus.vue 
+│   │   └── SignatureStatusBadge.vue 
+│   │   └── WorkflowStatus.vue 
+│   ├── [layout] 
+│   │   └── MainNav.vue 
+│   │   └── NavLink.vue 
+│   │   └── ThemeToggle.vue 
+│   │   └── UserMenu.vue 
+│   ├── [ui] 
+│   │   └── Button.vue 
+│   │   └── FormInput.vue 
+├── [composables] 
+│   └── useApi.ts 
+│   └── useAuth.ts 
+│   └── useAuthApi.ts 
+│   └── useAuthStorage.ts 
+│   └── useAuthToken.ts 
+│   └── useAuthUser.ts 
+├── [layouts] 
+│   └── default.vue 
+├── [middleware] 
+│   └── auth.global.ts 
+│   └── auth.ts 
+│   └── setup.global.ts 
+├── [pages] 
+│   └── index.vue 
+│   └── login.vue 
+│   └── register.vue 
+│   ├── [admin] 
+│   │   ├── [users] 
+│   │   │   └── index.vue 
+│   │   ├── [workflows] 
+│   │   │   └── index.vue 
+│   ├── [decomptes] 
+│   │   └── index.vue 
+│   │   └── nouveau.vue 
+│   ├── [setup] 
+│   │   └── index.vue 
+├── [plugins] 
+│   └── auth.client.ts 
+│   └── auth.ts 
+│   └── db.server.ts 
+│   └── error-handler.ts 
+├── [public] 
+│   └── favicon.ico 
+│   └── robots.txt 
+├── [scripts] 
+│   └── generateSecret.ts 
+│   └── generateToken.ts 
+├── [server] 
+│   └── tsconfig.json 
+│   ├── [api] 
+│   │   ├── [admin] 
+│   │   │   ├── [roles] 
+│   │   │   │   └── index.post.ts 
+│   │   │   ├── [users] 
+│   │   │   │   └── index.get.ts 
+│   │   │   │   ├── [[id]] 
+│   │   │   │   │   └── activate.post.ts 
+│   │   │   │   │   └── role.put.ts 
+│   │   │   ├── [workflows] 
+│   │   │   │   └── index.post.ts 
+│   │   │   │   ├── [steps] 
+│   │   │   │   │   └── index.post.ts 
+│   │   ├── [auth] 
+│   │   │   └── change-password.post.ts 
+│   │   │   └── login.post.ts 
+│   │   │   └── me.get.ts 
+│   │   │   └── refresh.post.ts 
+│   │   │   └── register.post.ts 
+│   │   ├── [decomptes] 
+│   │   │   └── index.get.ts 
+│   │   │   └── index.post.ts 
+│   │   │   ├── [[id]] 
+│   │   │   │   └── bordereau.post.ts 
+│   │   │   │   └── process.post.ts 
+│   │   │   │   └── sign.post.ts 
+│   │   │   │   ├── [bailleur] 
+│   │   │   │   │   └── bordereau.post.ts 
+│   │   │   │   ├── [signatures] 
+│   │   │   │   │   └── physical.post.ts 
+│   │   ├── [setup] 
+│   │   │   └── status.get.ts 
+│   ├── [config] 
+│   │   └── constants.ts 
+│   │   └── database.ts 
+│   │   └── index.ts 
+│   ├── [db] 
+│   │   └── users.ts 
+│   ├── [middleware] 
+│   │   └── auth.ts 
+│   │   └── error.ts 
+│   │   └── requireAuth.ts 
+│   ├── [models] 
+│   │   └── Decompte.ts 
+│   │   └── Organization.ts 
+│   │   └── Role.ts 
+│   │   └── Signature.ts 
+│   │   └── User.ts 
+│   │   └── Workflow.ts 
+│   │   └── WorkflowStep.ts 
+│   ├── [plugins] 
+│   │   └── mongoose.ts 
+│   ├── [utils] 
+│   │   └── auth.ts 
+│   │   └── config.ts 
+│   │   └── db.ts 
+│   │   └── errors.ts 
+│   │   └── pdf.ts 
+│   │   └── signatures.ts 
+│   │   └── token.ts 
+│   │   └── workflow.ts 
+│   │   ├── [auth] 
+│   │   │   └── tokenService.ts 
+│   │   ├── [db] 
+│   │   │   └── connection.ts 
+│   │   ├── [errors] 
+│   │   │   └── auth.ts 
+│   │   │   └── database.ts 
+├── [stores] 
+│   └── auth.ts 
+│   └── decomptes.ts 
+│   ├── [modules] 
+│   │   └── admin.ts 
+│   │   └── auth.ts 
+│   │   └── decomptes.ts 
+│   │   └── permissions.ts 
+│   │   └── roles.ts 
+│   │   └── setup.ts 
+│   │   └── signatures.ts 
+├── [types] 
+│   └── auth.ts 
+│   └── decompte.ts 
+│   └── workflow.ts 
+├── [utils] 
+│   └── auth.ts 
+│   └── date.ts 
+│   └── format.ts 
+│   └── validation.ts 
+│   └── workflow.ts 
