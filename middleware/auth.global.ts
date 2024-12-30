@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useAuthStore } from '~/stores/modules/auth'
 import { useSetupStore } from '~/stores/modules/setup'
@@ -41,3 +42,23 @@ export default defineNuxtRouteMiddleware(async (to) => {
     }
   }
 })
+=======
+export default defineNuxtRouteMiddleware((to) => {
+  // Liste des routes publiques qui ne nécessitent pas d'authentification
+  const publicRoutes = ['/', '/login', '/register']
+  
+  // Skip middleware on server-side
+  if (process.server) return
+  
+  // Allow access to public routes
+  if (publicRoutes.includes(to.path)) {
+    return
+  }
+
+  // Check for auth token
+  const token = localStorage.getItem('auth_token')
+  if (!token) {
+    return navigateTo('/login')
+  }
+})
+>>>>>>> 6e73255 (ajout des test)

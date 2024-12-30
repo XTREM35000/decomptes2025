@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // https://nuxt.com/docs/api/configuration/nuxt-config
+=======
+>>>>>>> 6e73255 (ajout des test)
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
@@ -8,6 +11,7 @@ export default defineNuxtConfig({
     '@vee-validate/nuxt'
   ],
 
+<<<<<<< HEAD
   nitro: {
     plugins: ['~/server/plugins/mongoose.ts']
   },
@@ -21,6 +25,10 @@ export default defineNuxtConfig({
     },
   },
 
+=======
+  css: ['~/assets/css/main.css'],
+
+>>>>>>> 6e73255 (ajout des test)
   colorMode: {
     classSuffix: ''
   },
@@ -31,6 +39,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+<<<<<<< HEAD
       ],
       link: [
         {
@@ -44,4 +53,19 @@ export default defineNuxtConfig({
 
   devtools: { enabled: false },
   compatibilityDate: '2024-12-29'
+=======
+      ]
+    }
+  },
+  build: {
+    transpile: ['vue-toastification']
+  },
+  runtimeConfig: {
+    mongodbUri: process.env.MONGODB_URI,
+    jwtSecret: process.env.JWT_SECRET
+  },
+   debug: true,
+  devtools: { enabled: true },
+  compatibilityDate: '2024-12-30'
+>>>>>>> 6e73255 (ajout des test)
 })

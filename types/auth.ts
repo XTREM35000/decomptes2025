@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 export type UserRole = 'PENDING' | 'CHEF_MISSION' | 'DTZ' | 'DMC' | 'DGA' | 'DG' | 'BAILLEUR'
+=======
+export type UserRole = 'ADMIN' | 'PENDING' | 'CHEF_MISSION' | 'DTZ' | 'DMC' | 'DGA' | 'DG' | 'BAILLEUR'
+>>>>>>> 6e73255 (ajout des test)
 export type UserStatus = 'PENDING' | 'ACTIVE' | 'INACTIVE'
 
 export interface User {

@@ -19,7 +19,11 @@ export const useAuthStore = defineStore('auth', {
       this.error = null
       
       try {
+<<<<<<< HEAD
         const response = await $fetch('/api/auth/login', {
+=======
+        const response = await $fetch<{ user: User; token: string }>('/api/auth/login', {
+>>>>>>> 6e73255 (ajout des test)
           method: 'POST',
           body: { email, password }
         })
@@ -42,7 +46,11 @@ export const useAuthStore = defineStore('auth', {
       this.error = null
       
       try {
+<<<<<<< HEAD
         const response = await $fetch('/api/auth/register', {
+=======
+        const response = await $fetch<{ user: User; token: string }>('/api/auth/register', {
+>>>>>>> 6e73255 (ajout des test)
           method: 'POST',
           body: userData
         })
@@ -64,6 +72,36 @@ export const useAuthStore = defineStore('auth', {
       this.user = null
       this.token = null
       localStorage.removeItem('auth_token')
+<<<<<<< HEAD
+=======
+    },
+
+    async checkAuth() {
+      try {
+        const token = localStorage.getItem('auth_token')
+        if (!token) {
+          return false
+        }
+
+        const response = await $fetch<{ user: User }>('/api/auth/verify', {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        })
+
+        if (response.user) {
+          this.user = response.user
+          this.token = token
+          return true
+        }
+
+        return false
+      } catch (error) {
+        this.logout()
+        return false
+      }
+>>>>>>> 6e73255 (ajout des test)
     }
   }
 })

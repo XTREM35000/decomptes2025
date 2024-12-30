@@ -23,11 +23,20 @@
       <Button
         type="submit"
         variant="primary"
+<<<<<<< HEAD
         :text="buttonText"
         :loading="isLoading"
         :disabled="isLoading"
         class="w-full"
       />
+=======
+        :loading="isLoading"
+        :disabled="isLoading"
+        class="w-full"
+      >
+        {{ buttonText }}
+      </Button>
+>>>>>>> 6e73255 (ajout des test)
       <NuxtLink 
         to="/register"
         class="text-sm text-center text-primary-600 hover:text-primary-500"
@@ -39,12 +48,20 @@
 </template>
 
 <script setup lang="ts">
+<<<<<<< HEAD
 import { useAuthStore } from '~/stores/modules/auth'
 import { useToast } from 'vue-toastification'
 
 const auth = useAuthStore()
 const toast = useToast()
 const router = useRouter()
+=======
+import { useAuth } from '~/composables/useAuth'
+import { useToast } from 'vue-toastification'
+
+const { login } = useAuth()
+const toast = useToast()
+>>>>>>> 6e73255 (ajout des test)
 
 const form = reactive({
   email: '',
@@ -81,9 +98,15 @@ const handleSubmit = async () => {
   
   isLoading.value = true
   try {
+<<<<<<< HEAD
     await auth.login(form)
     toast.success('Connexion réussie')
     router.push('/')
+=======
+    await login(form)
+    toast.success('Connexion réussie')
+    useRouter().push('/')
+>>>>>>> 6e73255 (ajout des test)
   } catch (error: any) {
     toast.error(error.message || 'Erreur de connexion')
   } finally {

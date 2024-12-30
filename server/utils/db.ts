@@ -1,5 +1,10 @@
 import mongoose from 'mongoose'
 import { config } from '../config'
+<<<<<<< HEAD
+=======
+import { configDotenv } from 'dotenv'
+// /* configDotenv */()
+>>>>>>> 6e73255 (ajout des test)
 
 let isConnected = false
 
@@ -7,7 +12,11 @@ export const connectDB = async () => {
   if (isConnected) return
 
   try {
+<<<<<<< HEAD
     const db = await mongoose.connect(config.mongodbUri, {
+=======
+    const db = await mongoose.connect(process.env.MONGODB_URI as string, {
+>>>>>>> 6e73255 (ajout des test)
       serverSelectionTimeoutMS: 5000,
       socketTimeoutMS: 45000,
     })

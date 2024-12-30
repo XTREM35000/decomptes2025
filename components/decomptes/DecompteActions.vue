@@ -23,6 +23,10 @@ import type { Decompte } from '~/types/decompte'
 import { useDecomptesStore } from '~/stores/modules/decomptes'
 import { useToast } from 'vue-toastification'
 import { useAuthStore } from '~/stores/modules/auth'
+<<<<<<< HEAD
+=======
+import { ref } from 'vue';
+>>>>>>> 6e73255 (ajout des test)
 
 const props = defineProps<{
   decompte: Decompte

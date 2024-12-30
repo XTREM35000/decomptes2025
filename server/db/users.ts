@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ```ts
+=======
+
+>>>>>>> 6e73255 (ajout des test)
 import { randomUUID } from 'crypto'
 
 interface User {
@@ -47,5 +51,9 @@ export const createUser = async (data: { email: string; password: string; name: 
 
   users.push(user)
   return user
+<<<<<<< HEAD
 }
 ```
+=======
+} 
+>>>>>>> 6e73255 (ajout des test)
